@@ -4,7 +4,7 @@ try{
 	alert("b");
 	alert(World);
 	var a = new World();
-	world.draw();
+	a.draw();
 }catch(e){
 	alert(e);
 }
