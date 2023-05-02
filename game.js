@@ -1,5 +1,5 @@
 alert("a");
-/*try{
+try{
 	import { World } from "engine/World.js";
 	alert(World);
 	var a = new World();
@@ -7,4 +7,4 @@ alert("a");
 }catch(e){
 	alert(e);
 }
-*/
+
