@@ -1,4 +1,4 @@
-class World{
+export class World{
 	constructor(){
 		try{
 		this.canvas = document.getElementById("board");
