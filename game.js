@@ -1,3 +1,4 @@
+alert("a");
 try{
 	import World from "engine/World.js";
 	alert(World);
