@@ -1,4 +1,4 @@
-export class World{
+class World{
 	constructor(){
 		try{
 		this.canvas = document.getElementById("board");
@@ -20,3 +20,4 @@ export class World{
 	moveEnt(){}
 	removeEnt(){}
 }
+export World;
