@@ -1,6 +1,6 @@
 alert("a");
+import { World } from "./World.js";
 try{
-	import { World } from "./World.js";
 	alert("b");
 	alert(World);
 	var a = new World();
