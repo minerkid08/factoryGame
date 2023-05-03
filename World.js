@@ -39,11 +39,15 @@ export class World {
 			}
 			for(const [x,v] of Object.entries(this.map)){
 				for(const [y,o] of Object.entries(v)){
+					try{
 					alert(typeof(x));
 					var x2 = parseInt(x);
 					var y2 = parseInt(y);
 					this.ctx.fillStyle = o.draw.color;
 					this.ctx.fillRect((x2 + this.player.pos.x)* this.gridSize, (y2 + this.player.pos.y) * this.gridSize, this.gridSize, this.gridSize);
+					}catch(e){
+						alert(e);
+					}
 				}
 			}
 		}
