@@ -49,7 +49,9 @@ export class World {
 	mousePress(pos, btn) {}
 	keyPress(key, state) {}
 	
-	addEnt(e, pos) {}
+	addEnt(e) {
+		this.map[e.pos.x][e.pos.y] = e;
+	}
 	moveEnt(e, pos) {}
 	removeEnt(e) {}
 }
