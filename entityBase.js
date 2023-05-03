@@ -1,4 +1,4 @@
-export class entityBase{
+export class EntityBase{
 	constructor(p, s, d){
 		this.pos = p;
 		this.size = s;
