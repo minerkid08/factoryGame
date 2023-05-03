@@ -1,4 +1,4 @@
-import { World } from "./World.js";
+import { World } from "./engine/World.js";
 try{
 	var a = new World();
 	a.draw();
