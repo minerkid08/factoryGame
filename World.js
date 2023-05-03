@@ -39,7 +39,7 @@ export class World {
 			}
 			for(const [x,v] of Object.entries(this.map)){
 				for(const [y,o] of Object.entries(v)){
-					alert("draw");
+					alert(typeof(x));
 					this.ctx.fillStyle = o.draw.color;
 					this.ctx.fillRect((x + this.player.pos.x)* this.gridSize, (y + this.player.pos.y) * this.gridSize, this.gridSize, this.gridSize);
 				}
