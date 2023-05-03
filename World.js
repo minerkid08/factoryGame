@@ -50,6 +50,9 @@ export class World {
 	keyPress(key, state) {}
 	
 	addEnt(e) {
+		if(map[this.pox.x] == null){
+			this.map[this.pos.x] = {};
+		}
 		this.map[e.pos.x][e.pos.y] = e;
 	}
 	moveEnt(e, pos) {}
