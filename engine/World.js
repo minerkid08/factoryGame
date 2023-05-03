@@ -4,8 +4,10 @@ export class World {
     this.canvas = document.getElementById("board");
     this.ctx = this.canvas.getContext("2d");
     this.map = {};
+    alert(v2);
     try{
-    this.player = { pos: new v2(0,0) };
+    //this.player = { pos: new v2(0,0) };
+    this.player = {pos:{x:0,y:0}};
     }catch(e){
       alert(e);
     }
