@@ -51,7 +51,7 @@ export class World {
 	
 	addEnt(e) {
 		alert(JSON.stringify(Object.keys(this)));
-		if(this.map[e.pox.x] == null){
+		if(this.map[e.pos.x] == null){
 			this.map[e.pos.x] = {};
 		}
 		this.map[e.pos.x][e.pos.y] = e;
