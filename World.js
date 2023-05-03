@@ -1,4 +1,4 @@
-//import { v2 } from "v2.js";
+import { v2 } from "./v2.js";
 export class World {
   constructor() {
     this.canvas = document.getElementById("board");
