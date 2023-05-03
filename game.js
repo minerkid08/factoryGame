@@ -1,6 +1,7 @@
 import { DrawParams } from "./DrawParams.js";
 import { World } from "./World.js";
 import { EntityBase } from "./entityBase.js";
+import { v2 } from "./v2.js";
 alert("a");
 try{
 	var draw = new DrawParams();
