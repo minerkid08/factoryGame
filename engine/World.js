@@ -20,4 +20,4 @@ class World{
 	moveEnt(){}
 	removeEnt(){}
 }
-export World;
+export deafult { World };
