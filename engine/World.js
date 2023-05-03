@@ -4,7 +4,11 @@ export class World {
     this.canvas = document.getElementById("board");
     this.ctx = this.canvas.getContext("2d");
     this.map = {};
+    try{
     this.player = { pos: new v2(0,0) };
+    }catch(e){
+      alert(e);
+    }
     this.grid = true;
     this.gridSize = 64;
   }
