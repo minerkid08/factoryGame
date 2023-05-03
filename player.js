@@ -1,5 +1,5 @@
-import { entityBase } from "./entityBase.js";
-export class Player{
+import { EntityBase } from "./entityBase.js";
+export class Player extends EntityBase{
 	movementUpdate(key, state){
 		
 	}
