@@ -1,5 +1,6 @@
-alert("a");
 import { World } from "./World.js";
+alert("a");
+
 try{
 	alert("b");
 	alert(World);
