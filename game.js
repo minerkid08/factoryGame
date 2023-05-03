@@ -1,5 +1,5 @@
-import { World } from "./World.js";
 import { DrawParams } from "./DrawParams.js";
+import { World } from "./World.js";
 import { EntityBase } from "./entityBase.js";
 alert("a");
 try{
