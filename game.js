@@ -5,6 +5,7 @@ import { EntityBase } from "./entityBase.js";
 import { v2 } from "./v2.js";
 alert("a");
 var a = new World();
+alert("d");
 a.setPlayer(new Player(new v2(60,60)));
 alert("b");
 var draw = new DrawParams();
