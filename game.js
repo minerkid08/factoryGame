@@ -15,3 +15,17 @@ var id = window.setInterval(function(){
 	a.draw();
 }, 50);
 a.draw();
+window.addEventListener("keydown", function (event) {
+		if (event.defaultPrevented) {
+			return; // Do nothing if the event was already processed
+		}
+		a.keyPress(event.key, true);
+		event.preventDefault();
+	}, true);
+window.addEventListener("keyup", function (event) {
+		if (event.defaultPrevented) {
+			return; // Do nothing if the event was already processed
+		}
+		a.keyPress(event.key, false);
+		event.preventDefault();
+	}, true);
