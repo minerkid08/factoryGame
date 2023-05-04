@@ -12,7 +12,9 @@ var ent = new EntityBase(new v2(4,5));
 ent.draw = draw;
 a.addEnt(ent);
 var id = window.setInterval(function(){
+	alert("u");
 	a.update();
+	alert("d");
 	a.draw();
 }, 50);
 a.draw();
