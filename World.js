@@ -4,20 +4,26 @@ export class World {
 		this.canvas = document.getElementById("board");
 		this.ctx = this.canvas.getContext("2d");
 		this.map = {};
-		alert(v2);
-		try{
-		//this.player = { pos: new v2(0,0) };
-		this.player = {pos:{x:0,y:0}};
-		}catch(e){
-			alert(e);
-		}
 		this.grid = true;
 		this.gridSize = 64;
 	}
 	setPlayer(p) {
 		this.player = p;
 	}
-	update() {}
+	update() {
+		for(const [x2,v] of Object.entries(this.map)){
+			for(const [y2,o] of Object.entries(v)){
+				var x = parseInt(x2);
+				var y = parseInt(y2);
+				if(this.map[x][y].update() != null){
+					this.map[x][y].update();
+				}
+			}
+		}
+		if(this.player.draw != null){
+			this.player.draw();
+		}
+	}
 	draw() {
 		this.ctx.font = "25px serif";
 		this.ctx.fillStyle = "#000000";
@@ -40,7 +46,6 @@ export class World {
 			for(const [x,v] of Object.entries(this.map)){
 				for(const [y,o] of Object.entries(v)){
 					try{
-					alert(typeof(x));
 					var x2 = parseInt(x);
 					var y2 = parseInt(y);
 					this.ctx.fillStyle = o.draw.color;
@@ -53,7 +58,9 @@ export class World {
 		}
 	}
 	mousePress(pos, btn) {}
-	keyPress(key, state) {}
+	keyPress(key, state) {
+		this.player.keys[key] = state;
+	}
 	
 	addEnt(e) {
 		alert(JSON.stringify(Object.keys(this)));
