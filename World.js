@@ -21,8 +21,8 @@ export class World {
 				}
 			}
 		}
-		if(this.player.draw != null){
-			this.player.draw();
+		if(this.player.update != null){
+			this.player.update();
 		}
 	}
 	draw() {
@@ -57,6 +57,10 @@ export class World {
 					}
 				}
 			}
+		}
+		if(this.player.draw != null){
+			this.ctx.fillStyle = this.player.draw.color;
+			this.ctx.fillRect(this.player.pos.x * this.gridSize, this.player.pos.y * this.gridSize, this.gridSize/2, this.gridSize/2);
 		}
 	}
 	mousePress(pos, btn) {}
