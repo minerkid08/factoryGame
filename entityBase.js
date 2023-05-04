@@ -1,8 +1,10 @@
+import { v2 } from "./v2.js";
+import { DrawParams } from "./DrawParams.js";
 export class EntityBase{
-	constructor(p, s, d){
+	constructor(p){
 		this.pos = p;
-		this.size = s;
-		this.draw = d;
+		this.size = new v2(0,0);
+		this.draw = new DrawParams();
 		this.start();
 	}
 	start(){}

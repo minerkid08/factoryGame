@@ -1,5 +1,8 @@
 import { EntityBase } from "./entityBase.js";
 export class Player extends EntityBase{
+	start(){
+		this.draw.color = "#008000";
+	}
 	update(){
 		if(this.keys["w"]){
 			this.pos.y -= 4;
