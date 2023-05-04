@@ -5,7 +5,7 @@ import { EntityBase } from "./entityBase.js";
 import { v2 } from "./v2.js";
 alert("a");
 var a = new World();
-a.setPlayer(new Player());
+a.setPlayer(new Player(new v2(60,60)));
 var draw = new DrawParams();
 draw.color = "#808080";
 var ent = new EntityBase(new v2(4,5));
