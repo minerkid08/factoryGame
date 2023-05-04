@@ -13,11 +13,15 @@ export class World {
 	update() {
 		for(const [x2,v] of Object.entries(this.map)){
 			for(const [y2,o] of Object.entries(v)){
+				try{
 				var x = parseInt(x2);
 				var y = parseInt(y2);
 				if(this.map[x][y].update() != null){
 					alert("update");
 					this.map[x][y].update();
+				}
+				}catch(e){
+					alert(e);
 				}
 			}
 		}
