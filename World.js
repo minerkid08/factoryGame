@@ -50,7 +50,7 @@ export class World {
 					var x2 = parseInt(x);
 					var y2 = parseInt(y);
 					this.ctx.fillStyle = o.draw.color;
-					this.ctx.fillRect((x2 + this.player.pos.x)* this.gridSize, (y2 + this.player.pos.y) * this.gridSize, this.gridSize, this.gridSize);
+					this.ctx.fillRect((x2 - this.player.pos.x)* this.gridSize, (y2 - this.player.pos.y) * this.gridSize, this.gridSize, this.gridSize);
 					}catch(e){
 						alert(e);
 					}
@@ -59,7 +59,7 @@ export class World {
 		}
 		if(this.player.draw != null){
 			this.ctx.fillStyle = this.player.draw.color;
-			this.ctx.fillRect(this.canvas.width - this.gridSize/4, this.canvas.height - this.gridSize/4, this.gridSize/2, this.gridSize/2);
+			this.ctx.fillRect(this.canvas.width/2 - this.gridSize/4, this.canvas.height/2 - this.gridSize/4, this.gridSize/2, this.gridSize/2);
 		}
 	}
 	mousePress(pos, btn) {}
