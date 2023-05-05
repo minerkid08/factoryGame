@@ -5,15 +5,12 @@ import { EntityBase } from "./entityBase.js";
 import { v2 } from "./v2.js";
 alert("a");
 var a = new World();
-alert("d");
 a.setPlayer(new Player(new v2(0,0)));
-alert("b");
 var draw = new DrawParams();
 draw.color = "#808080";
 var ent = new EntityBase(new v2(4,5));
 ent.draw = draw;
 a.addEnt(ent);
-alert("c");
 var id = window.setInterval(function(){
 	a.update();
 	a.draw();
