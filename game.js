@@ -6,7 +6,7 @@ import { v2 } from "./v2.js";
 alert("a");
 var a = new World();
 alert("d");
-a.setPlayer(new Player(new v2(60,60)));
+a.setPlayer(new Player(new v2(0,0)));
 alert("b");
 var draw = new DrawParams();
 draw.color = "#808080";
