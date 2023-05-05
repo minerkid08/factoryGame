@@ -31,12 +31,12 @@ export class World {
 		this.ctx.fillText((this.player.pos.x % this.gridSize) - 63, 15, 30);
 		if (this.grid) {
 			for (
-				var x = (this.player.pos.x % this.gridSize) - 63;
+				var x = ((this.player.pos.x * -this.gridSize) % this.gridSize) - 63;
 				x < this.canvas.width;
 				x += this.gridSize
 			) {
 				for (
-					var y = (this.player.pos.y % this.gridSize) - 63;
+					var y = ((this.player.pos.y * -this.gridSize) % this.gridSize) - 63;
 					y < this.canvas.height;
 					y += this.gridSize
 				) {
