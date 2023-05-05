@@ -84,7 +84,7 @@ export class World {
 	moveEnt(e, pos) {
 		this.map[e.pos.x][e.pos.y] = null;
 		if(this.map[pos.x] == null){
-			this.map[pos.x = {};
+			this.map[pos.x] = {};
 		}
 		this.map[pos.x][pos.y] = e;
 	}
