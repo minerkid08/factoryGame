@@ -1,15 +1,11 @@
 import { Player } from "./player.js";
-import { DrawParams } from "./DrawParams.js";
 import { World } from "./World.js";
-import { EntityBase } from "./entityBase.js";
+import { Box } from "./box.js";
 import { v2 } from "./v2.js";
 alert("a");
 var a = new World();
 a.setPlayer(new Player(new v2(0,0)));
-var draw = new DrawParams();
-draw.color = "#808080";
-var ent = new EntityBase(new v2(4,5));
-ent.draw = draw;
+var ent = new Box(new v2(4,5));
 a.addEnt(ent);
 var id = window.setInterval(function(){
 	a.update();
