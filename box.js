@@ -14,7 +14,7 @@ export class Box extends EntityBase{
 		if(this.dir){
 			this.pos.x += 1;
 			this.step += 1;
-			if(this.step == maxDist){
+			if(this.step == this.maxDist){
 				this.dir = false;
 				return;
 			}
