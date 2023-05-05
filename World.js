@@ -59,7 +59,7 @@ export class World {
 		}
 		if(this.player.draw != null){
 			this.ctx.fillStyle = this.player.draw.color;
-			this.ctx.fillRect(this.player.pos.x * this.gridSize, this.player.pos.y * this.gridSize, this.gridSize/2, this.gridSize/2);
+			this.ctx.fillRect(this.canvas.width - this.gridSize/4, this.canvas.height - this.gridSize/4, this.gridSize/2, this.gridSize/2);
 		}
 	}
 	mousePress(pos, btn) {}
