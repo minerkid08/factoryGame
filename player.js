@@ -2,6 +2,7 @@ import { EntityBase } from "./entityBase.js";
 export class Player extends EntityBase{
 	start(){
 		this.draw.color = "#008000";
+		this.keys = [w:false, a:false, s:false, d:false];
 	}
 	update(){
 		if(this.keys["w"]){
