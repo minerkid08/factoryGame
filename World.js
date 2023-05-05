@@ -45,7 +45,6 @@ export class World {
 			}
 			for(const [x,v] of Object.entries(this.map)){
 				for(const [y,o] of Object.entries(v)){
-					alert("draw");
 					try{
 					var x2 = parseInt(x);
 					var y2 = parseInt(y);
