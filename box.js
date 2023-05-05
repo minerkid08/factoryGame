@@ -8,6 +8,7 @@ export class Box{
 		this.step = 0;
 	}
 	update(){
+		try{
 		if(this.dir){
 			this.pos.x += 1;
 			this.step += 1;
@@ -23,5 +24,6 @@ export class Box{
 				return;
 			}
 		}
+		}catch(e){alert(e);}
 	}
 }
