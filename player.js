@@ -7,16 +7,16 @@ export class Player extends EntityBase{
 	update(){
 		try{
 		if(this.keys["w"]){
-			this.pos.y -= 4;
+			this.pos.y -= 4/64;
 		}
 		if(this.keys["s"]){
-			this.pos.y += 4;
+			this.pos.y += 4/64;
 		}
 		if(this.keys["a"]){
-			this.pos.x -= 4;
+			this.pos.x -= 4/64;
 		}
 		if(this.keys["d"]){
-			this.pos.x += 4;
+			this.pos.x += 4/64;
 		}
 		}catch(e){
 			alert(e);
