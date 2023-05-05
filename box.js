@@ -1,6 +1,6 @@
 import { v2 } from "./v2.js";
 import { EntityBase } from "./entityBase.js";
-export class Box{
+export class Box extends EntityBase{
 	start(){
 		this.draw.color = "#800000";
 		this.maxDist = 3;
