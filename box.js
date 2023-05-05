@@ -2,10 +2,12 @@ import { v2 } from "./v2.js";
 import { EntityBase } from "./entityBase.js";
 export class Box extends EntityBase{
 	start(){
+		try{
 		this.draw.color = "#800000";
 		this.maxDist = 3;
 		this.dir = true;
 		this.step = 0;
+		}catch(e){alert(e);}
 	}
 	update(){
 		try{
