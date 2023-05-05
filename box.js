@@ -9,8 +9,9 @@ export class Box extends EntityBase{
 	}
 	update(world){
 		try{
+		var newPos = this.pos;
 		if(this.dir){
-			this.pos.x += 1;
+			newPos.x += 1;
 			this.step += 1;
 			world.moveEnt(this, this.pos);
 			if(this.step == this.maxDist){
@@ -18,7 +19,7 @@ export class Box extends EntityBase{
 				return;
 			}
 		}else{
-			this.pos.x -= 1;
+			newPos.x -= 1;
 			this.step -= 1;
 			world.moveEnt(this, this.pos);
 			if(this.step == 0){
