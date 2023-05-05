@@ -5,6 +5,7 @@ export class Player extends EntityBase{
 		this.keys = [w:false, a:false, s:false, d:false];
 	}
 	update(){
+		try{
 		if(this.keys["w"]){
 			this.pos.y -= 4;
 		}
@@ -16,6 +17,9 @@ export class Player extends EntityBase{
 		}
 		if(this.keys["d"]){
 			this.pos.x += 4;
+		}
+		}catch(e){
+			alert(e);
 		}
 	}
 }
