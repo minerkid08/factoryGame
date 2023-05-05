@@ -15,9 +15,7 @@ ent.draw = draw;
 a.addEnt(ent);
 alert("c");
 var id = window.setInterval(function(){
-	alert("u");
 	a.update();
-	alert("d");
 	a.draw();
 }, 50);
 a.draw();
