@@ -28,7 +28,7 @@ export class World {
 		this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
 		this.ctx.font = "25px serif";
 		this.ctx.fillStyle = "#000000";
-		this.ctx.fillText(":/", 15, 30);
+		this.ctx.fillText((this.player.pos.x % this.gridSize) - 63, 15, 30);
 		if (this.grid) {
 			for (
 				var x = (this.player.pos.x % this.gridSize) - 63;
