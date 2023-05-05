@@ -68,11 +68,13 @@ export class World {
 	}
 	
 	addEnt(e) {
+		try{
 		alert(JSON.stringify(Object.keys(this)));
 		if(this.map[e.pos.x] == null){
 			this.map[e.pos.x] = {};
 		}
 		this.map[e.pos.x][e.pos.y] = e;
+		}catch(e){alert(e);}
 	}
 	moveEnt(e, pos) {}
 	removeEnt(e) {}
