@@ -11,13 +11,16 @@ export class World {
 		this.player = p;
 	}
 	update() {
+		var ents = [];
 		for(const [x2,v] of Object.entries(this.map)){
 			for(const [y2,o] of Object.entries(v)){
-				var x = parseInt(x2);
-				var y = parseInt(y2);
-				if(this.map[x][y].update() != null){
-					this.map[x][y].update();
-				}
+				ents.push(o);
+			}
+		}
+		for(var i = 0; i < ents.length; i++){
+			var ent = ents[i];
+			if(ent.update != null){
+				ent.update(this);
 			}
 		}
 		if(this.player.update != null){
@@ -76,6 +79,12 @@ export class World {
 		this.map[e.pos.x][e.pos.y] = e;
 		}catch(e){alert(e);}
 	}
-	moveEnt(e, pos) {}
+	moveEnt(e, pos) {
+		this.map[e.pos.x][e.pos.y] = null;
+		if(this.map[pos.x] == null){
+			this.map[pos.x = {};
+		}
+		this.map[pos.x][pos.y] = e;
+	}
 	removeEnt(e) {}
 }
