@@ -21,7 +21,7 @@ export class Box extends EntityBase{
 		}else{
 			newPos.x -= 1;
 			this.step -= 1;
-			world.moveEnt(this, this.pos);
+			world.moveEnt(this, newPos);
 			if(this.step == 0){
 				this.dir = true;
 				return;
