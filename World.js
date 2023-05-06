@@ -72,14 +72,12 @@ export class World {
 		this.player.keys[key] = state;
 	}
 	
-	addEnt(e) {
-		try{
-		alert(JSON.stringify(Object.keys(this)));
-		if(this.map[e.pos.x] == null){
-			this.map[e.pos.x] = {};
+	addEnt(e, pos) {
+		var ent = new e(pos);
+		if(this.map[pos.x] == null){
+			this.map[pos.x] = {};
 		}
-		this.map[e.pos.x][e.pos.y] = e;
-		}catch(e){alert(e);}
+		this.map[pos.x][pos.y] = e;
 	}
 	moveEnt(e, pos) {
 		this.map[e.pos.x][e.pos.y] = null;
