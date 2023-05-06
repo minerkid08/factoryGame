@@ -8,7 +8,6 @@ export class Box extends EntityBase{
 		this.step = 0;
 	}
 	update(world){
-		try{
 		var newPos = this.pos;
 		if(this.dir){
 			newPos.x += 1;
@@ -27,6 +26,5 @@ export class Box extends EntityBase{
 				return;
 			}
 		}
-		}catch(e){alert(e);}
 	}
 }
