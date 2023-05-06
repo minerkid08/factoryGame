@@ -5,8 +5,7 @@ import { v2 } from "./v2.js";
 alert("a");
 var a = new World();
 a.setPlayer(new Player(new v2(0,0)));
-var ent = new Box(new v2(4,5));
-a.addEnt(ent);
+a.addEnt(Box, new v2(4,2));
 var id = window.setInterval(function(){
 	a.update();
 	a.draw();
