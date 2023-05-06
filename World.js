@@ -11,7 +11,6 @@ export class World {
 		this.player = p;
 	}
 	update() {
-		try{
 		var ents = [];
 		for(const [x2,v] of Object.entries(this.map)){
 			for(const [y2,o] of Object.entries(v)){
@@ -27,7 +26,6 @@ export class World {
 		if(this.player.update != null){
 			this.player.update();
 		}
-		}catch(e){alert(e);}
 	}
 	draw() {
 		this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
